@@ -9,7 +9,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.runnables import RunnableConfig
 from langgraph.graph import StateGraph, END, START
 from langgraph.prebuilt import ToolNode
-import agent.prompts as prompts
+import agent.agent.prompts as prompts
 from typing import List, Callable, Any, Dict
 from typing_extensions import Literal, cast
 

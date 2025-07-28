@@ -10,7 +10,7 @@ from langgraph.graph import StateGraph, END, START
 from agent.state import InputState, State
 from agent.configuration import Configuration
 
-from agent.react_agent import create_react_agent
+from agent.agent.react_agent import create_react_agent
 from agent.tools import TOOL_LIST, tool_node 
 
 agent = create_react_agent("Coder Agent", TOOL_LIST, tool_node)
