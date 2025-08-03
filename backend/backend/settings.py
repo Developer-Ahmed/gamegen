@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+from dotenv import load_dotenv
+import os
+
+from urllib.parse import urlparse
+
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +32,9 @@ SECRET_KEY = 'django-insecure-ik4mmev!(a2m_bo+56a-vbtqw3cjc-y$n6&12ja^7p!h=gvicm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "566141c33156.ngrok-free.app" # dev server
+]
 
 
 # Application definition
@@ -37,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gamegen',  # Custom app for game generation
 ]
 
 MIDDLEWARE = [
@@ -72,10 +82,35 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+connection_url = os.getenv("SUPABASE_DB_CONNECTION_STRING")
+connection_url = connection_url.replace("[", "").replace("]", "")
+
+parsed_url = urlparse(connection_url)
+# Extract parsed values to variables
+SUPABASE_DB_NAME = parsed_url.path.lstrip("/")
+SUPABASE_DB_USER = parsed_url.username
+SUPABASE_DB_HOST = parsed_url.hostname
+SUPABASE_DB_PORT = parsed_url.port or 5432  # Default PostgreSQL port
+SUPABASE_DB_PASSWORD = os.getenv("SUPABASE_DB_PASSWORD")
+SUPABASE_DB_CONNECTION_STRING = os.getenv("SUPABASE_DB_CONNECTION_STRING")
+
+# Supabase API Configuration
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
+SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY", "")
+SUPABASE_JWT_SECRET = os.getenv("SUPABASE_JWT_SECRET", "")
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": SUPABASE_DB_NAME,
+        "USER": SUPABASE_DB_USER,
+        "PASSWORD": SUPABASE_DB_PASSWORD,
+        "HOST": SUPABASE_DB_HOST,
+        "PORT": SUPABASE_DB_PORT,
+        "OPTIONS": {
+            "sslmode": "require",  # Supabase requires SSL
+        },
     }
 }
 
@@ -97,6 +132,22 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+        "gamegen.auth.throttling.IPRateThrottle",
+        "gamegen.auth.throttling.IPBasedUserRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": os.getenv("DEFAULT_THROTTLE_RATES_ANON", "100/day"),
+        "user": os.getenv("DEFAULT_THROTTLE_RATES_USER", "1000/day"),
+        "premium": os.getenv("DEFAULT_THROTTLE_RATES_PREMIUM", "5000/day"),
+        "ip": os.getenv("DEFAULT_THROTTLE_RATES_IP", "1000/hour"),
+        "user_ip": os.getenv("DEFAULT_THROTTLE_RATES_USER_IP", "500/hour"),
+    }
+}
 
 
 # Internationalization
@@ -120,3 +171,48 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Logging configuration
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "logs" / "django.log",
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["console", "file"],
+            "level": "INFO",
+            "propagate": True,
+        },
+        "apps": {
+            "handlers": ["console", "file"],
+            "level": "INFO",
+            "propagate": True,
+        },
+    },
+}
+
+# Create logs directory if it doesn't exist
+logs_dir = BASE_DIR / "logs"
+logs_dir.mkdir(exist_ok=True)
