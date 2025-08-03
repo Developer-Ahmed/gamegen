@@ -1,0 +1,178 @@
+ERROR 2025-08-02 21:34:55,998 log 54390 6163329024 Internal Server Error: /auth/session/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 284, in _get_response_async
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+        response.render, thread_sensitive=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )()
+    ^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/renderers.py", line 730, in render
+    template = loader.get_template(self.template)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+WARNING 2025-08-02 21:36:14,589 log 54390 6163329024 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+ERROR 2025-08-02 21:37:29,254 log 54442 6130118656 Internal Server Error: /auth/session/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 284, in _get_response_async
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+        response.render, thread_sensitive=True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )()
+    ^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/renderers.py", line 730, in render
+    template = loader.get_template(self.template)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+WARNING 2025-08-02 21:37:29,283 log 54442 6130118656 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+ERROR 2025-08-02 21:45:05,739 log 54586 6130528256 Invalid HTTP_HOST header: '566141c33156.ngrok-free.app'. You may need to add '566141c33156.ngrok-free.app' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/utils/deprecation.py", line 132, in __acall__
+    response = await sync_to_async(
+               ^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )(request)
+    ^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/http/request.py", line 202, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '566141c33156.ngrok-free.app'. You may need to add '566141c33156.ngrok-free.app' to ALLOWED_HOSTS.
+ERROR 2025-08-02 21:46:08,168 log 54643 6162198528 Internal Server Error: /auth/signup/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/throttling.py", line 92, in get_rate
+    return self.THROTTLE_RATES[self.scope]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'ip'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 503, in dispatch
+    self.initial(request, *args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 422, in initial
+    self.check_throttles(request)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 364, in check_throttles
+    for throttle in self.get_throttles():
+                    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 290, in get_throttles
+    return [throttle() for throttle in self.throttle_classes]
+            ~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/throttling.py", line 70, in __init__
+    self.rate = self.get_rate()
+                ~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/throttling.py", line 95, in get_rate
+    raise ImproperlyConfigured(msg)
+django.core.exceptions.ImproperlyConfigured: No default throttle rate set for 'ip' scope
+WARNING 2025-08-02 21:50:20,158 log 54717 6134738944 Method Not Allowed: /auth/signup/
+WARNING 2025-08-02 21:50:31,013 log 54717 6134738944 Bad Request: /auth/signup/
+WARNING 2025-08-02 21:50:42,621 log 54717 6134738944 Bad Request: /auth/signup/
+ERROR 2025-08-02 21:51:19,803 log 54717 6134738944 Internal Server Error: /auth/signup/
+ERROR 2025-08-02 22:08:37,099 log 54933 6123843584 Internal Server Error: /auth/signup/
+ERROR 2025-08-02 22:12:29,626 log 54982 6190870528 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:29:31,041 log 54982 6190870528 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:37:14,760 log 54982 6190870528 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:47:44,022 log 56360 6202519552 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:48:00,148 log 56360 6202519552 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:50:07,461 log 56360 6202519552 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:51:48,175 log 56423 6127071232 Internal Server Error: /auth/login/
+ERROR 2025-08-02 23:52:03,457 log 56423 6127071232 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:01:23,536 log 56585 6171226112 Internal Server Error: /auth/signup/
+ERROR 2025-08-03 00:02:58,220 log 56621 6126546944 Internal Server Error: /auth/signup/
+ERROR 2025-08-03 00:03:31,166 log 56630 6131609600 Internal Server Error: /auth/signup/
+ERROR 2025-08-03 00:04:35,766 log 56647 6171389952 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:05:21,995 log 56663 6171045888 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:05:39,656 log 56663 6171045888 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:06:20,676 log 56677 6205059072 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:08:21,873 log 56677 6205059072 Internal Server Error: /auth/login/
+ERROR 2025-08-03 00:10:59,410 log 56718 6204960768 Internal Server Error: /auth/login/
+WARNING 2025-08-03 00:13:14,818 log 56718 6204960768 Method Not Allowed: /auth/session/
+WARNING 2025-08-03 00:13:19,520 log 56718 6204960768 Bad Request: /auth/session/
