@@ -176,3 +176,9 @@ ERROR 2025-08-03 00:08:21,873 log 56677 6205059072 Internal Server Error: /auth/
 ERROR 2025-08-03 00:10:59,410 log 56718 6204960768 Internal Server Error: /auth/login/
 WARNING 2025-08-03 00:13:14,818 log 56718 6204960768 Method Not Allowed: /auth/session/
 WARNING 2025-08-03 00:13:19,520 log 56718 6204960768 Bad Request: /auth/session/
+WARNING 2025-08-03 00:57:01,387 log 57130 6128218112 Method Not Allowed: /auth/session/
+WARNING 2025-08-03 00:57:06,209 log 57130 6128218112 Bad Request: /auth/session/
+ERROR 2025-08-03 00:57:31,015 log 57169 6163197952 Internal Server Error: /auth/session/
+WARNING 2025-08-03 00:57:55,611 log 57169 6163197952 Method Not Allowed: /auth/logout/
+WARNING 2025-08-03 00:58:06,070 log 57169 6163197952 Method Not Allowed: /auth/session/
+ERROR 2025-08-03 00:59:18,377 log 57195 6125596672 Internal Server Error: /auth/session/

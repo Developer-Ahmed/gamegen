@@ -1,3 +1,4 @@
+from urllib import response
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from rest_framework import status, permissions
@@ -18,6 +19,22 @@ from .throttling import IPRateThrottle, IPBasedUserRateThrottle
 logger = logging.getLogger(__name__)
 
 auth_service = SupabaseAuthService()
+
+import jwt
+from datetime import datetime, timezone
+
+def is_token_expired(token: str) -> bool:
+    try:
+        decoded = jwt.decode(token, options={"verify_signature": False})
+        exp = decoded.get("exp")
+
+        if not exp:
+            return True  # No expiration info found
+        
+        # Compare with current UTC time
+        return datetime.now(timezone.utc).timestamp() > exp
+    except Exception as e:
+        return True  # Consider invalid tokens as expired
 
 def validate_email_format(email):
     """
@@ -86,6 +103,7 @@ def signup(request: Request) -> Response:
             "supabase_uid": auth_result.get("id", ""),
             "email": email,
         }
+
         return Response(sanitized_response, status=status.HTTP_201_CREATED)
     except Exception as e:
         logger.error("Signup error: %s", str(e))
@@ -146,8 +164,36 @@ def sign_in_with_email(request: Request) -> Response:
             
         # Log successful sign-in (without the password)
         logger.info(f"User signed in: {email}")
-            
-        return Response(result, status=status.HTTP_200_OK)
+ 
+        res = Response(result, status=status.HTTP_200_OK)
+
+        access_token = response.get("access_token")
+        refresh_token = response.get("refresh_token")
+        print(f"access_token: {access_token}")
+        print(f"refresh_token: {refresh_token}")
+
+        # Set tokens as HTTP-only cookies
+        # Access Token: expires in 1 hour (example)
+        res.set_cookie(
+            key="access_token",
+            value=access_token,
+            httponly=True,
+            secure=True,             # True in production
+            samesite="Strict",          # or "Strict" / "None" based on CORS setup
+            max_age=3600,            # 1 hour
+        )
+
+        # Refresh Token: longer expiration (e.g. 30 days)
+        res.set_cookie(
+            key="refresh_token",
+            value=refresh_token,
+            httponly=True,
+            secure=True,
+            samesite="Strict",
+            max_age=60 * 60 * 24 * 30,  # 30 days
+        )
+
+        return res
     except Exception as e:
         error_message = str(e)
         logger.warning(f"Sign-in failed for user {email}: {error_message}")
@@ -183,6 +229,9 @@ def sign_out(request: Request) -> Response:
         auth_header = request.headers.get('Authorization', '')
         if auth_header.startswith('Bearer '):
             auth_token = auth_header.split(' ')[1]
+
+    # get cookie
+    auth_token = request.COOKIES.get("access_token", "")
     
     if not auth_token:
         return Response(
@@ -192,7 +241,12 @@ def sign_out(request: Request) -> Response:
     try:
         auth_service.sign_out(auth_token=auth_token)
         # Return 204 No Content on successful logout as per REST conventions
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        res = Response(status=status.HTTP_204_NO_CONTENT)
+
+        res.delete_cookie("access_token")
+        res.delete_cookie("refresh_token")
+
+        return res
     except Exception as e:
         error_message = str(e)
         # Check if the error is related to authentication
@@ -212,16 +266,13 @@ def get_session(request: Request) -> Response:
     """
     Retrieve the user's session.
     """
-    auth_token = request.headers.get("Authorization")
+
+    auth_token = request.COOKIES.get("access_token", "")
 
     if not auth_token:
         return Response(
             {"error": "Auth token is required"}, status=status.HTTP_400_BAD_REQUEST
         )
-
-    # Remove 'Bearer ' prefix if present
-    if auth_token.startswith("Bearer "):
-        auth_token = auth_token[7:]
 
     try:
         response = auth_service.get_session(auth_token=auth_token)
@@ -237,7 +288,7 @@ def refresh_session(request: Request) -> Response:
     """
     Refresh a user's session using a refresh token.
     """
-    refresh_token = request.data.get("refresh_token")
+    refresh_token = request.COOKIES.get("refresh_token", "")
 
     if not refresh_token:
         return Response(
@@ -246,7 +297,34 @@ def refresh_session(request: Request) -> Response:
 
     try:
         response = auth_service.refresh_session(refresh_token=refresh_token)
-        return Response(response, status=status.HTTP_200_OK)
+
+        access_token = response.get("access_token")
+        refresh_token = response.get("refresh_token")
+
+        res = Response(response, status=status.HTTP_200_OK)
+
+        # Set tokens as HTTP-only cookies
+        # Access Token: expires in 1 hour (example)
+        res.set_cookie(
+            key="access_token",
+            value=access_token,
+            httponly=True,
+            secure=True,             # True in production
+            samesite="Strict",          # or "Strict" / "None" based on CORS setup
+            max_age=3600,            # 1 hour
+        )
+
+        # Refresh Token: longer expiration (e.g. 30 days)
+        res.set_cookie(
+            key="refresh_token",
+            value=refresh_token,
+            httponly=True,
+            secure=True,
+            samesite="Strict",
+            max_age=60 * 60 * 24 * 30,  # 30 days
+        )
+
+        return res
     except Exception as e:
         return Response(
             {"error": f"Failed to refresh session: {str(e)}"},
