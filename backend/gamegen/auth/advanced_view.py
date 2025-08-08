@@ -15,26 +15,12 @@ from ..supabase.auth import SupabaseAuthService
 
 # Import custom throttling classes
 from .throttling import IPRateThrottle, IPBasedUserRateThrottle
+from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view, permission_classes
 
 logger = logging.getLogger(__name__)
 
 auth_service = SupabaseAuthService()
-
-import jwt
-from datetime import datetime, timezone
-
-def is_token_expired(token: str) -> bool:
-    try:
-        decoded = jwt.decode(token, options={"verify_signature": False})
-        exp = decoded.get("exp")
-
-        if not exp:
-            return True  # No expiration info found
-        
-        # Compare with current UTC time
-        return datetime.now(timezone.utc).timestamp() > exp
-    except Exception as e:
-        return True  # Consider invalid tokens as expired
 
 def validate_email_format(email):
     """
@@ -52,6 +38,7 @@ def validate_email_format(email):
 
 @api_view(["POST"])
 @throttle_classes([IPRateThrottle])
+@permission_classes([AllowAny])
 def signup(request: Request) -> Response:
     """
     Create a new user with email and password.
@@ -121,6 +108,7 @@ def signup(request: Request) -> Response:
 
 @api_view(["POST"])
 @throttle_classes([IPRateThrottle])
+@permission_classes([AllowAny])
 def sign_in_with_email(request: Request) -> Response:
     """
     Sign in a user with email and password.

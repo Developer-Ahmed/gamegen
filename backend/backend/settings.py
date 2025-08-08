@@ -33,7 +33,8 @@ SECRET_KEY = 'django-insecure-ik4mmev!(a2m_bo+56a-vbtqw3cjc-y$n6&12ja^7p!h=gvicm
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "566141c33156.ngrok-free.app" # dev server
+    "369cd4b8c679.ngrok-free.app", # dev server
+    "localhost",
 ]
 
 
@@ -134,6 +135,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "gamegen.auth.middleware.SupabaseJWTAuthentication",
+    ],
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framework.permissions.IsAuthenticated",
+    ],
     "DEFAULT_THROTTLE_CLASSES": [
         "rest_framework.throttling.AnonRateThrottle",
         "rest_framework.throttling.UserRateThrottle",
