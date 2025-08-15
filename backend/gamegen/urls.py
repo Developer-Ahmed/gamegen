@@ -14,7 +14,8 @@ urlpatterns = [
     path('auth/session/refresh/', auth_view.refresh_session, name='refresh_session'),
 
     path("", views.chat, name="chat"),
-    # path('chat', chat.get_messages, name='chat'),
+    path('chat/', chat.get_chat_messages, name='chat'),
+    path('chat/send/', chat.post_chat_message, name='chat-send'),
     # path('chat/messages', chat.stream_response, name='chat'),
 
 ]
