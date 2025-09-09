@@ -19,6 +19,8 @@ logger = logging.getLogger(__name__)
 
 from agent.streaming import stream_chat, get_final_or_full
 
+# everytime the server is started, all the messages are lost. Deployment can be used to prevent that but unless self hosting it costs money.
+
 @api_view(["GET"])
 @throttle_classes([IPRateThrottle])
 @permission_classes([AllowAny])
@@ -26,25 +28,26 @@ def get_chat_messages(request: Request) -> Response:
     """
     Access previous chat messages.
     """
-    thread_id = "1234"
+    thread_id = request.data.get("thread_id", "")
+    if not thread_id:
+        return Response({"error": "Thread id is required."}, status=status.HTTP_400_BAD_REQUEST)
+
     res = get_final_or_full(thread_id, final=False)
     return Response({"messages": res}, status=status.HTTP_200_OK)
 
 @api_view(["POST"])
 @throttle_classes([IPRateThrottle])
+# for testing, it's fine but it would be better to only allow authenticated users
 @permission_classes([AllowAny])
 def post_chat_message(request: Request) -> Response:
     """
     Post a new chat message.
     """
-    thread_id = "1234"
     message = request.data.get("message", "")
-    if not message:
-        return Response({"error": "Message content is required."}, status=status.HTTP_400_BAD_REQUEST)
+    thread_id = request.data.get("thread_id", "")
+    if not message or not thread_id:
+        return Response({"error": "Message content and thread id are required."}, status=status.HTTP_400_BAD_REQUEST)
 
-    # Here you would typically add the message to the chat thread
-    # For example:
-    # add_message_to_thread(thread_id, message)
     res = stream_chat(thread_id, message)
     
     return Response({"messages": res}, status=status.HTTP_200_OK)

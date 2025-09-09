@@ -13,7 +13,7 @@ import agent.prompts as prompts
 from typing import List, Callable, Any, Dict
 from typing_extensions import Literal, cast
 
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 from .configuration import Configuration
 from .state import InputState, State
@@ -46,7 +46,13 @@ def create_react_agent(agent_name: str, tool_list: List[Callable[..., Any]], too
         configuration = Configuration.from_runnable_config(config)
 
         # Initialize the model with tool binding. Change the model or add more tools here.
-        model = ChatOpenAI(model="gpt-4.1", temperature=0.2)
+        model = ChatGoogleGenerativeAI(
+            model= "gemini-2.5-pro",
+            temperature=0.2,
+            max_retries=2,
+            google_api_key="AIzaSyDWs9bxvnL_wDXeO0vJ4eLxZDEd6iP4Bzc",
+        )
+
         model = model.bind_tools(tool_list)
 
         response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
@@ -86,7 +92,7 @@ def create_react_agent(agent_name: str, tool_list: List[Callable[..., Any]], too
             return END
         # Otherwise we execute the requested actions
         print("Tool calls:", last_message.tool_calls)
-        return "tools"
+        return "tools" 
         
     # Define a new graph
     workflow = StateGraph(State, input=InputState, config_schema=Configuration)

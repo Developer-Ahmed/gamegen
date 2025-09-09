@@ -13,6 +13,11 @@ import requests
 
 from e2b import Sandbox
 
+# to use celery workers:
+# from celery import shared_task
+# add shared_task before the function 
+# .delay when calling it
+
 timeout = 60 * 20 # 20 minutes
 sandbox = Sandbox("hz6cq1pkqd79v8kexebd", api_key="e2b_f57262ad11f118dd0a0be41796fc09ff2fc0f12f", timeout=timeout) # default: alive for 5 min
 
