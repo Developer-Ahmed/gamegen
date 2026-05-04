@@ -20,6 +20,9 @@ from .state import InputState, State
 
 from langgraph.checkpoint.memory import InMemorySaver
 
+import os
+
+
 def create_react_agent(agent_name: str, tool_list: List[Callable[..., Any]], tool_node: ToolNode) -> StateGraph:
     """Create a React agent.
 
@@ -31,26 +34,15 @@ def create_react_agent(agent_name: str, tool_list: List[Callable[..., Any]], too
     """
     
     def call_model(state: State, config: RunnableConfig) -> Dict[str, List[AIMessage]]:
-        """Call the LLM powering our "agent".
-
-        This function prepares the prompt, initializes the model, and processes the response.
-
-        Args:
-            state (State): The current state of the conversation.
-            config (RunnableConfig): Configuration for the model run.
-            store (BaseStore): Database of relevant information for the conversation.
-
-        Returns:
-            dict: A dictionary containing the model's response message.
-        """
+        """Call the LLM powering our "agent"."""
         configuration = Configuration.from_runnable_config(config)
 
-        # Initialize the model with tool binding. Change the model or add more tools here.
+        # Pass API key directly, let the library handle missing key errors
         model = ChatGoogleGenerativeAI(
-            model= "gemini-2.5-pro",
+            model="gemini-2.5-flash",
             temperature=0.2,
             max_retries=2,
-            google_api_key="AIzaSyDWs9bxvnL_wDXeO0vJ4eLxZDEd6iP4Bzc",
+            google_api_key="AIzaSyAKFKYykyjB_JaWUaF9jYjtP3Mkkxwvvzo"
         )
 
         model = model.bind_tools(tool_list)

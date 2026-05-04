@@ -48,11 +48,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gamegen',  # Custom app for game generation
+    'corsheaders',  # Added for CORS support
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Added for CORS support
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -223,3 +225,18 @@ LOGGING = {
 # Create logs directory if it doesn't exist
 logs_dir = BASE_DIR / "logs"
 logs_dir.mkdir(exist_ok=True)
+
+# CORS configuration
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Vite dev server
+    "https://369cd4b8c679.ngrok-free.app",  # ngrok dev server
+    # Add your production frontend domain here
+]
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be sent
+
+# CSRF configuration
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+    "https://369cd4b8c679.ngrok-free.app",
+    # Add your production frontend domain here
+]

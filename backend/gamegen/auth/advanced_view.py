@@ -9,6 +9,7 @@ from django.core.cache import cache
 import hashlib
 import logging
 import re
+import sys
 
 # Import the SupabaseAuthService directly
 from ..supabase.auth import SupabaseAuthService
@@ -18,9 +19,20 @@ from .throttling import IPRateThrottle, IPBasedUserRateThrottle
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes
 
+# Use root logger for this module to ensure logs are always output
+root_logger = logging.getLogger()
+root_logger.setLevel(logging.INFO)
+if not root_logger.handlers:
+    handler = logging.StreamHandler(sys.stdout)
+    handler.setFormatter(logging.Formatter('%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'))
+    root_logger.addHandler(handler)
+
 logger = logging.getLogger(__name__)
 
 auth_service = SupabaseAuthService()
+
+# Set this to True in production! For local development, keep it False.
+COOKIE_SECURE = False  # TODO: Set to True in production
 
 def validate_email_format(email):
     """
@@ -166,7 +178,7 @@ def sign_in_with_email(request: Request) -> Response:
             key="access_token",
             value=access_token,
             httponly=True,
-            secure=True,             # True in production
+            secure=COOKIE_SECURE,  # Use global setting
             samesite="Strict",          # or "Strict" / "None" based on CORS setup
             max_age=3600,            # 1 hour
         )
@@ -176,7 +188,7 @@ def sign_in_with_email(request: Request) -> Response:
             key="refresh_token",
             value=refresh_token,
             httponly=True,
-            secure=True,
+            secure=COOKIE_SECURE,  # Use global setting
             samesite="Strict",
             max_age=60 * 60 * 24 * 30,  # 30 days
         )
@@ -250,22 +262,33 @@ def sign_out(request: Request) -> Response:
             )
 
 @api_view(["GET"])
+@permission_classes([AllowAny])
 def get_session(request: Request) -> Response:
     """
     Retrieve the user's session.
     """
-
-    auth_token = request.COOKIES.get("access_token", "")
+    # Try to get token from Authorization header first
+    auth_header = request.headers.get("Authorization", "")
+    auth_token = None
+    if auth_header.startswith("Bearer "):
+        auth_token = auth_header.split(" ", 1)[1]
+        logger.info(f"get_session: Received access_token from Authorization header: {auth_token[:12]}...")
+    else:
+        # Fallback to cookie
+        auth_token = request.COOKIES.get("access_token", "")
+        logger.info(f"get_session: Received access_token from cookie: {auth_token[:12]}...")
 
     if not auth_token:
+        logger.warning("get_session: No access_token found in header or cookie.")
         return Response(
-            {"error": "Auth token is required"}, status=status.HTTP_400_BAD_REQUEST
+            {"error": "Auth token is required"}, status=status.HTTP_401_UNAUTHORIZED
         )
 
     try:
         response = auth_service.get_session(auth_token=auth_token)
         return Response(response, status=status.HTTP_200_OK)
     except Exception as e:
+        logger.error(f"get_session: Exception: {str(e)}")
         return Response(
             {"error": f"Failed to get session: {str(e)}"},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -297,7 +320,7 @@ def refresh_session(request: Request) -> Response:
             key="access_token",
             value=access_token,
             httponly=True,
-            secure=True,             # True in production
+            secure=COOKIE_SECURE,  # Use global setting
             samesite="Strict",          # or "Strict" / "None" based on CORS setup
             max_age=3600,            # 1 hour
         )
@@ -307,7 +330,7 @@ def refresh_session(request: Request) -> Response:
             key="refresh_token",
             value=refresh_token,
             httponly=True,
-            secure=True,
+            secure=COOKIE_SECURE,  # Use global setting
             samesite="Strict",
             max_age=60 * 60 * 24 * 30,  # 30 days
         )

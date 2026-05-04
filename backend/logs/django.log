@@ -1143,3 +1143,2663 @@ Traceback (most recent call last):
     raise self._make_status_error_from_response(err.response) from None
 openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
 During task with name 'agent' and id '63f74ca3-d604-7d7d-8fbf-4da766290a30'
+WARNING 2026-01-15 02:34:06,157 log 25563 6130085888 Not Found: /api/auth/session
+WARNING 2026-01-15 02:34:06,166 log 25563 6130085888 Not Found: /api/auth/session
+WARNING 2026-01-15 02:34:53,922 log 25563 6130085888 Not Found: /api/auth/session
+WARNING 2026-01-15 02:34:53,926 log 25563 6130085888 Not Found: /api/auth/session
+WARNING 2026-01-15 02:35:13,251 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:35:13,258 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:35:28,767 log 25602 6156972032 Not Found: /api/auth/signup
+WARNING 2026-01-15 02:37:49,975 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:37:49,985 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:38:03,082 log 25602 6156972032 Not Found: /api/auth/signup
+WARNING 2026-01-15 02:38:30,509 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:38:30,519 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:38:34,533 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:38:34,545 log 25602 6156972032 Not Found: /api/auth/session
+WARNING 2026-01-15 02:39:16,709 log 25602 6156972032 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:39:16,712 log 25602 6156972032 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:39:24,346 log 25602 6156972032 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:39:24,352 log 25602 6156972032 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:39:34,924 log 25602 6156972032 Bad Request: /auth/signup/
+WARNING 2026-01-15 02:39:41,964 log 25602 6156972032 Bad Request: /auth/signup/
+ERROR 2026-01-15 02:39:55,029 log 25602 6156972032 Internal Server Error: /auth/signup/
+WARNING 2026-01-15 02:51:13,625 log 25602 6156972032 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:51:13,631 log 25602 6156972032 Unauthorized: /auth/session/
+ERROR 2026-01-15 02:51:40,319 log 25602 6156972032 Internal Server Error: /auth/signup/
+WARNING 2026-01-15 02:53:23,621 log 25920 6161821696 Unauthorized: /auth/session/
+WARNING 2026-01-15 02:53:23,628 log 25920 6161821696 Unauthorized: /auth/session/
+ERROR 2026-01-15 02:53:40,089 log 25920 6161821696 Internal Server Error: /auth/signup/
+WARNING 2026-01-15 02:59:09,606 log 26043 6199111680 Method Not Allowed: /chat/
+WARNING 2026-01-15 03:03:43,496 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-15 03:03:43,503 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-15 03:09:46,616 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-15 03:09:46,634 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-17 01:30:32,512 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-17 01:30:32,520 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-17 06:59:26,077 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-17 06:59:26,081 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 19:55:33,696 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 19:55:33,720 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 21:21:13,748 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 21:21:13,754 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:02:03,383 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:02:03,391 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:28:15,247 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:28:15,260 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:40:25,242 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-19 22:40:25,247 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 07:05:44,636 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 07:05:44,641 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 07:32:55,423 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 07:32:55,442 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 09:39:05,058 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 09:39:05,067 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 19:03:51,314 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 19:03:51,322 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 19:44:46,217 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 19:44:46,230 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 20:15:07,448 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-22 20:15:07,458 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 16:11:54,284 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 16:11:54,291 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 16:32:25,828 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 16:32:25,836 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 20:15:13,512 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-23 20:15:13,520 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:01:07,356 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:01:07,365 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:18:04,156 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:18:04,165 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:49:21,464 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-24 19:49:21,470 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 02:28:52,934 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 02:28:52,940 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 03:16:16,712 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 03:16:16,722 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 20:07:37,830 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 20:07:37,837 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 20:15:14,980 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 20:15:14,989 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 23:28:03,118 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-26 23:28:03,134 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 18:42:32,461 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 18:42:32,469 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 19:30:27,622 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 19:30:27,660 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 20:04:57,309 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 20:04:57,317 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 20:15:24,510 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-27 20:15:24,517 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 00:04:58,604 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 00:04:58,611 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 00:54:48,822 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 00:54:48,831 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 04:12:06,764 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 04:12:06,807 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 06:28:32,713 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 06:28:32,725 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 12:47:25,656 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 12:47:25,662 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 15:23:08,666 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 15:23:08,683 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 16:56:46,445 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 16:56:46,454 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 18:35:55,330 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 18:35:55,340 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 20:07:22,092 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 20:07:22,100 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 20:09:51,456 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-28 20:09:51,465 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-30 20:13:16,387 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-30 20:13:16,392 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-30 20:15:29,786 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-01-30 20:15:29,802 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-02 19:33:26,429 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-02 19:33:26,434 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-02 20:15:17,202 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-02 20:15:17,206 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 18:24:36,846 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 18:24:36,856 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 18:42:13,505 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 18:42:13,511 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 19:40:22,052 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 19:40:22,066 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 20:15:38,107 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-03 20:15:38,127 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 03:25:38,704 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 03:25:38,710 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 04:22:30,124 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 04:22:30,134 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 19:39:23,043 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 19:39:23,048 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 20:15:07,471 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-04 20:15:07,475 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 04:52:28,321 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 04:52:28,328 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 05:19:09,101 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 05:19:09,117 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 06:00:47,775 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-05 06:00:47,825 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-07 20:43:48,419 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-07 20:43:48,423 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-07 23:23:34,284 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-07 23:23:34,289 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-08 06:53:21,165 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-08 06:53:21,187 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-08 21:56:26,921 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-08 21:56:26,926 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 00:34:26,810 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 00:34:26,818 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 19:30:46,763 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 19:30:46,773 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 19:43:39,511 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 19:43:39,526 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 20:15:24,346 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 20:15:24,354 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 22:00:32,767 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-09 22:00:32,777 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 18:57:11,871 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 18:57:11,885 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 19:35:52,923 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 19:35:52,938 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 20:15:15,381 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-10 20:15:15,385 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 19:57:37,332 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 19:57:37,340 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 20:15:33,866 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 20:15:33,875 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 21:15:43,401 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 21:15:43,423 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 22:06:25,322 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 22:06:25,328 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 22:24:07,678 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-02-11 22:24:07,684 log 26043 6199111680 Unauthorized: /auth/session/
+WARNING 2026-04-17 19:59:39,050 log 87410 6158135296 Not Found: /favicon.ico
+WARNING 2026-04-17 20:01:03,280 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:01:03,285 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:01:28,284 log 87410 6158135296 Bad Request: /auth/signup/
+WARNING 2026-04-17 20:01:48,694 log 87410 6158135296 Bad Request: /auth/signup/
+ERROR 2026-04-17 20:02:09,758 log 87410 6158135296 Internal Server Error: /auth/signup/
+WARNING 2026-04-17 20:12:49,846 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:12:49,853 log 87410 6158135296 Unauthorized: /auth/session/
+ERROR 2026-04-17 20:13:09,147 log 87410 6158135296 Internal Server Error: /auth/login/
+ERROR 2026-04-17 20:13:36,755 log 87410 6158135296 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 58, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 23.332826852s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 23
+}
+]
+During task with name 'agent' and id 'c4605be3-7df7-3b65-0d76-4e458c31f21d'
+WARNING 2026-04-17 20:15:03,747 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:15:03,762 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:15:03,784 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 20:15:03,792 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 21:26:41,179 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 21:26:41,185 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 21:26:41,188 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-17 21:26:41,191 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 21:56:10,377 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 21:56:10,383 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 21:57:02,599 log 87410 6158135296 Bad Request: /auth/signup/
+WARNING 2026-04-18 21:57:26,469 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 21:57:26,475 log 87410 6158135296 Unauthorized: /auth/session/
+ERROR 2026-04-18 21:57:48,360 log 87410 6158135296 Internal Server Error: /auth/login/
+ERROR 2026-04-18 21:59:26,626 log 87410 6158135296 Internal Server Error: /auth/login/
+WARNING 2026-04-18 22:00:44,243 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:00:44,249 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:00:46,795 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:00:46,801 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:00:52,821 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:00:52,825 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:01:48,366 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:01:48,372 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:02:27,208 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:02:27,212 log 87410 6158135296 Unauthorized: /auth/session/
+ERROR 2026-04-18 22:02:42,967 log 87410 6158135296 Internal Server Error: /auth/login/
+WARNING 2026-04-18 22:03:19,840 log 87410 6158135296 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:03:19,845 log 87410 6158135296 Unauthorized: /auth/session/
+ERROR 2026-04-18 22:04:39,382 log 87410 6158135296 Internal Server Error: /auth/login/
+ERROR 2026-04-18 22:17:57,277 log 87410 6158135296 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 58, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+Please retry in 2.785297667s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 2
+}
+]
+During task with name 'agent' and id 'fc9d388b-621c-b79d-e0ef-3cdb55384b49'
+WARNING 2026-04-18 22:19:03,482 log 88638 6190804992 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:19:03,489 log 88638 6190804992 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:19:30,991 log 88638 6190804992 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:19:30,997 log 88638 6190804992 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:07,614 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:07,620 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:07,625 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:07,629 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:32,842 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:22:32,853 log 88688 6159560704 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:25:06,464 log 88735 6126432256 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:25:06,470 log 88735 6126432256 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:27:55,014 log 88765 6196342784 Unauthorized: /auth/session/
+WARNING 2026-04-18 22:27:55,021 log 88765 6196342784 Unauthorized: /auth/session/
+ERROR 2026-04-18 22:37:59,583 log 88805 6136705024 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 58, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+Please retry in 486.902352ms. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+}
+]
+During task with name 'agent' and id '548c6286-f6bd-428f-fdb1-b70ff3775a56'
+ERROR 2026-04-18 22:47:07,188 log 88805 6136705024 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 58, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.5-pro
+Please retry in 52.898044385s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 52
+}
+]
+During task with name 'agent' and id 'd1803b7e-9dfc-8499-326c-771b4e28dc81'
+ERROR 2026-04-18 22:55:16,191 log 89119 6167212032 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 58, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 43.902191196s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 43
+}
+]
+During task with name 'agent' and id '694ccaae-3600-50f9-7101-0d0d513c0b94'
+ERROR 2026-04-18 22:56:56,684 log 89180 6172143616 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 55, in call_model
+    model = ChatGoogleGenerativeAI(
+        model= "gemini-3.1-pro-preview",
+        temperature=0.2,
+        max_retries=2
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1345, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/load/serializable.py", line 130, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1404, in validate_environment
+    self.client = genaix.build_generative_service(
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        credentials=self.credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/_genai_extension.py", line 276, in build_generative_service
+    return v1betaGenerativeServiceClient(**config)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 697, in __init__
+    self._transport = transport_init(
+                      ~~~~~~~~~~~~~~^
+        credentials=credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        api_audience=self._client_options.api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/grpc.py", line 234, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        api_audience=api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/base.py", line 100, in __init__
+    credentials, _ = google.auth.default(
+                     ~~~~~~~~~~~~~~~~~~~^
+        **scopes_kwargs, quota_project_id=quota_project_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/auth/_default.py", line 685, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+During task with name 'agent' and id 'c0cb5a54-13c8-a314-e10e-6a6300d22439'
+ERROR 2026-04-18 23:00:45,955 log 89251 6157512704 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 54, in call_model
+    raise RuntimeError("GOOGLE_API_KEY environment variable must be set for Gemini model access.")
+RuntimeError: GOOGLE_API_KEY environment variable must be set for Gemini model access.
+During task with name 'agent' and id '908020eb-6b7e-ff41-7aca-3a0fceaa4519'
+ERROR 2026-04-18 23:03:04,402 log 89285 6201012224 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 41, in call_model
+    model = ChatGoogleGenerativeAI(
+        model="gemini-3.1-pro-preview",
+    ...<2 lines>...
+        google_api_key=os.environ.get("GOOGLE_API_KEY")
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1345, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/load/serializable.py", line 130, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1404, in validate_environment
+    self.client = genaix.build_generative_service(
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        credentials=self.credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/_genai_extension.py", line 276, in build_generative_service
+    return v1betaGenerativeServiceClient(**config)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 697, in __init__
+    self._transport = transport_init(
+                      ~~~~~~~~~~~~~~^
+        credentials=credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        api_audience=self._client_options.api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/grpc.py", line 234, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        api_audience=api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/base.py", line 100, in __init__
+    credentials, _ = google.auth.default(
+                     ~~~~~~~~~~~~~~~~~~~^
+        **scopes_kwargs, quota_project_id=quota_project_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/auth/_default.py", line 685, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+During task with name 'agent' and id '2275ce4c-7ca4-9c0d-0c66-ebf119ce54a0'
+ERROR 2026-04-18 23:04:45,020 log 89304 6199406592 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 50, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 15.066473551s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 15
+}
+]
+During task with name 'agent' and id '9144a15d-ef1b-bfb8-1e8e-0f7fadac6122'
+ERROR 2026-04-18 23:10:26,458 log 89472 6137098240 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 50, in call_model
+    response = cast(AIMessage, model.invoke([{"role": "system", "content": configuration.system_prompt}, *state.messages], config))
+                               ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/runnables/base.py", line 5495, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1490, in invoke
+    return super().invoke(input, config, stop=stop, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 393, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1019, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 837, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/language_models/chat_models.py", line 1085, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1597, in _generate
+    response: GenerateContentResponse = _chat_with_retry(
+                                        ~~~~~~~~~~~~~~~~^
+        request=request,
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        metadata=self.default_metadata,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 247, in _chat_with_retry
+    return _chat_with_retry(**params)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ~~~~~~~~~~~~~~~~~^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 236, in _chat_with_retry
+    raise e
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 216, in _chat_with_retry
+    return generation_method(**kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 868, in generate_content
+    response = rpc(
+        request,
+    ...<2 lines>...
+        metadata=metadata,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+        target,
+    ...<3 lines>...
+        on_error=on_error,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+        exc,
+    ...<6 lines>...
+        timeout,
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/retry/retry_unary.py", line 147, in retry_target
+    result = target()
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-pro
+Please retry in 33.640305971s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerDay-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.1-pro"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 33
+}
+]
+During task with name 'agent' and id 'a1b010e4-d83d-e039-972e-7160aa6c149e'
+ERROR 2026-04-18 23:16:26,734 log 89562 6125023232 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 50, in call_model
+    model = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+    ...<2 lines>...
+        google_api_key=os.environ.get("GOOGLE_API_KEY")
+    )
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1345, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_core/load/serializable.py", line 130, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/chat_models.py", line 1404, in validate_environment
+    self.client = genaix.build_generative_service(
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        credentials=self.credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        transport=transport,
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langchain_google_genai/_genai_extension.py", line 276, in build_generative_service
+    return v1betaGenerativeServiceClient(**config)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 697, in __init__
+    self._transport = transport_init(
+                      ~~~~~~~~~~~~~~^
+        credentials=credentials,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        api_audience=self._client_options.api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/grpc.py", line 234, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        host=host,
+        ^^^^^^^^^^
+    ...<6 lines>...
+        api_audience=api_audience,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/base.py", line 100, in __init__
+    credentials, _ = google.auth.default(
+                     ~~~~~~~~~~~~~~~~~~~^
+        **scopes_kwargs, quota_project_id=quota_project_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/google/auth/_default.py", line 685, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+During task with name 'agent' and id 'dbdb9d88-136f-7d2f-bc44-230b39d373df'
+ERROR 2026-04-18 23:17:31,624 log 89592 6171602944 Internal Server Error: /chat/send/
+Traceback (most recent call last):
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 489, in thread_handler
+    raise exc_info[1]
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+        request, *callback_args, **callback_kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 439, in __call__
+    ret = await asyncio.shield(exec_coro)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.5/Frameworks/Python.framework/Versions/3.13/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/asgiref/sync.py", line 493, in thread_handler
+    return func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/rest_framework/decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "/opt/gamegen/backend/gamegen/chat.py", line 51, in post_chat_message
+    res = stream_chat(thread_id, message)
+  File "/opt/gamegen/backend/agent/streaming.py", line 6, in stream_chat
+    for chunk in agent.stream(
+                 ~~~~~~~~~~~~^
+        {"messages": [{"role": "user", "content": message}]},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        config={"configurable": {"thread_id": thread_id}},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        stream_mode="updates"
+        ^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2647, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_runner.py", line 162, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 659, in invoke
+    input = step.invoke(input, config)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 401, in invoke
+    ret = self.func(*args, **kwargs)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/graph/_branch.py", line 168, in _route
+    result = self.path.invoke(value, config)
+  File "/Users/ahmedbozdogan/Library/Caches/pypoetry/virtualenvs/backend-FLvcOnmU-py3.13/lib/python3.13/site-packages/langgraph/_internal/_runnable.py", line 394, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+  File "/opt/gamegen/backend/agent/react_agent.py", line 79, in route_model_output
+    raise ValueError(
+        f"Expected AIMessage in output edges, but got {type(last_message).__name__}"
+    )
+ValueError: Expected AIMessage in output edges, but got HumanMessage
+During task with name 'agent' and id 'dafac9d9-e246-fe61-2a39-9456ed6c7230'
+WARNING 2026-04-19 20:46:05,380 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 20:46:05,398 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 20:46:05,404 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 20:46:05,413 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 21:30:39,348 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 21:30:39,357 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 21:30:39,367 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-19 21:30:39,372 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 18:53:11,225 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 18:53:11,236 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 18:53:11,239 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 18:53:11,242 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 19:24:25,813 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 19:24:25,824 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 19:24:25,835 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 19:24:25,838 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:14:32,389 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:14:32,415 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:14:32,423 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:14:32,431 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:44:58,539 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:44:58,551 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:44:58,557 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 20:44:58,561 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 21:17:39,911 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 21:17:39,916 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 21:17:39,919 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-20 21:17:39,923 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:05:50,633 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:05:50,641 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:05:50,646 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:05:50,651 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:15:12,077 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:15:12,088 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:15:12,095 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-21 20:15:12,105 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 19:21:33,111 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 19:21:33,116 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 19:21:33,120 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 19:21:33,123 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:04:57,262 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:04:57,292 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:04:57,305 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:04:57,309 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:11:27,336 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:11:27,342 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:11:27,354 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-22 20:11:27,360 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 03:34:18,747 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 03:34:18,752 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 03:34:18,757 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 03:34:18,764 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:14:25,987 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:14:25,991 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:14:25,994 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:14:25,996 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:17:49,432 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:17:49,441 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:17:49,446 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:17:49,450 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:28:23,712 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:28:23,752 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:28:23,764 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-23 20:28:23,767 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-27 03:32:05,762 log 89623 6158708736 Unauthorized: /auth/session/
+WARNING 2026-04-27 03:32:05,767 log 89623 6158708736 Unauthorized: /auth/session/
+ERROR 2026-04-27 03:32:29,850 log 89623 6158708736 Internal Server Error: /auth/login/
+WARNING 2026-04-27 03:54:22,778 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 03:54:22,784 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 04:05:02,431 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 04:05:02,449 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 19:20:40,091 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 19:20:40,101 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 19:20:40,300 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 19:20:40,305 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 20:15:11,819 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 20:15:11,857 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 20:15:11,858 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-27 20:15:11,867 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 19:28:51,867 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 19:28:51,872 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 19:57:08,995 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 19:57:09,001 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 20:15:23,111 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-29 20:15:23,119 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-30 18:20:44,185 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-30 18:20:44,201 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-30 18:20:44,378 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-04-30 18:20:44,386 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 18:34:50,121 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 18:34:50,127 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 18:34:50,252 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 18:34:50,258 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 19:36:42,447 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 19:36:42,454 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 19:36:42,649 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 19:36:42,671 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 21:10:18,991 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 21:10:18,999 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 21:10:19,207 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-03 21:10:19,215 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:03:37,773 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:03:37,777 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:03:37,973 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:03:37,980 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:25:51,003 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:25:51,003 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:25:51,014 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:25:51,014 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:38:33,099 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:38:33,104 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:38:33,302 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 04:38:33,308 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:07:15,639 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:07:15,645 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:07:15,892 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:07:15,902 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:27:01,406 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:27:01,414 log 98074 6239449088 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:27:01,616 log 98074 6205796352 Unauthorized: /auth/session/
+WARNING 2026-05-04 05:27:01,628 log 98074 6239449088 Unauthorized: /auth/session/

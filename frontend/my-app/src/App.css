@@ -1,0 +1,148 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* --- WELCOME SCREEN --- */
+.welcome-msg {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 150px;
+  animation: fadeIn 1s ease-in-out;
+  color: #4a7bd0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- LOGIN PAGE --- */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.logo {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #4a7bd0;
+  margin-bottom: 20px;
+}
+
+.form {
+  background: white;
+  padding: 35px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 25px rgba(0,0,0,0.08);
+}
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd2d8;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.form input:focus {
+  border-color: #4a7bd0;
+  outline: none;
+}
+
+/* Submit button */
+#button {
+  width: 100%;
+  padding: 12px;
+  background: #4a7bd0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#button:hover {
+  background: #3b6ab5;
+}
+
+/* --- HOME PAGE --- */
+.home-container {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.home-header h1 {
+  font-size: 2.7rem;
+  color: #4a7bd0;
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Home buttons */
+.home-content {
+  margin-top: 40px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+/* Primary button */
+.primary-btn {
+  background: #4a7bd0;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #3b6ab5;
+}
+
+/* Secondary button */
+.secondary-btn {
+  background: white;
+  border: 2px solid #4a7bd0;
+  color: #4a7bd0;
+}
+
+.secondary-btn:hover {
+  background: #e8eef7;
+}
