@@ -35,6 +35,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "369cd4b8c679.ngrok-free.app", # dev server
     "localhost",
+    "127.0.0.1",
 ]
 
 
@@ -111,8 +112,17 @@ DATABASES = {
         "PASSWORD": SUPABASE_DB_PASSWORD,
         "HOST": SUPABASE_DB_HOST,
         "PORT": SUPABASE_DB_PORT,
+        # Generation jobs routinely outlive a normal HTTP request. Recycle connections before
+        # Supabase or an intermediate network device can leave Django holding a dead socket.
+        "CONN_MAX_AGE": int(os.getenv("DATABASE_CONN_MAX_AGE", "30")),
+        "CONN_HEALTH_CHECKS": True,
         "OPTIONS": {
             "sslmode": "require",  # Supabase requires SSL
+            "connect_timeout": int(os.getenv("DATABASE_CONNECT_TIMEOUT", "10")),
+            "keepalives": 1,
+            "keepalives_idle": 20,
+            "keepalives_interval": 10,
+            "keepalives_count": 3,
         },
     }
 }
@@ -229,6 +239,7 @@ logs_dir.mkdir(exist_ok=True)
 # CORS configuration
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite dev server
+    "http://127.0.0.1:5173",  # Vite dev server
     "https://369cd4b8c679.ngrok-free.app",  # ngrok dev server
     # Add your production frontend domain here
 ]
@@ -237,6 +248,7 @@ CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be sent
 # CSRF configuration
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    "http://127.0.0.1:5173",
     "https://369cd4b8c679.ngrok-free.app",
     # Add your production frontend domain here
 ]

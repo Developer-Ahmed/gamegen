@@ -1,0 +1,252 @@
+{
+  "manifest_version": 1,
+  "components": [
+    {
+      "name": "godot.web_runtime",
+      "version": "1.0.0",
+      "engine": "Godot 4.7",
+      "category": "godot_core",
+      "description": "Required Godot 4 web project foundation and browser test bridge.",
+      "use_when": ["Every generated Godot web game. This component is installed automatically."],
+      "provides": ["project.godot", "Web export preset", "GamegenWebRuntime.publish_ready"],
+      "api": [
+        "GamegenWebRuntime.publish_ready(smoke_result: Dictionary) -> void"
+      ],
+      "method_contracts": {
+        "publish_ready": {
+          "signature": "GamegenWebRuntime.publish_ready(smoke_result: Dictionary) -> void",
+          "returns": "void",
+          "preconditions": ["smoke_result matches SmokeResult", "first playable frame has rendered"],
+          "side_effects": ["sets browser readiness and publishes the smoke result"],
+          "non_effects": ["does not run gameplay checks", "does not mutate game state"]
+        }
+      },
+      "data_contracts": {
+        "SmokeResult": {
+          "type": "Dictionary",
+          "required": {"ok": "bool", "details": "non-empty String"}
+        }
+      },
+      "invariants": [
+        "Call publish_ready only after the first playable render.",
+        "The smoke result must come from executed checks, never a hard-coded success."
+      ],
+      "examples": [
+        "GamegenWebRuntime.publish_ready({\"ok\": smoke_test_passed, \"details\": \"verified legal turn and terminal state\"})"
+      ],
+      "foundation_member": "",
+      "dependencies": [],
+      "files": [
+        {"source": "godot/web_runtime/project.godot", "target": "project/project.godot"},
+        {"source": "godot/web_runtime/export_presets.cfg", "target": "project/export_presets.cfg"},
+        {"source": "godot/web_runtime/gamegen_web_runtime.gd", "target": "project/addons/gamegen/web_runtime/gamegen_web_runtime.gd"},
+        {"source": "godot/web_runtime/main.gd", "target": "project/game/main.gd"},
+        {"source": "godot/web_runtime/main.tscn", "target": "project/game/main.tscn"}
+      ]
+    },
+    {
+      "name": "godot.turn_system",
+      "version": "1.1.0",
+      "engine": "Godot 4.7",
+      "category": "gameplay",
+      "description": "Validated deterministic turn order with advance, reverse, skip, restoration, signals, and snapshots.",
+      "use_when": ["The game has turns or one active player at a time."],
+      "provides": ["GamegenTurnOrder", "active player tracking", "reverse", "skip", "serializable snapshots"],
+      "api": [
+        "GamegenTurnOrder.new()",
+        "configure(player_ids: Array, starting_index: int = 0) -> bool",
+        "is_configured() -> bool",
+        "player_count() -> int",
+        "current_player() -> String",
+        "current_index() -> int",
+        "direction() -> int",
+        "turn_number() -> int",
+        "advance(steps: int = 1) -> String",
+        "skip(players_to_skip: int = 1) -> String",
+        "reverse() -> bool",
+        "restore(state: Dictionary) -> bool",
+        "snapshot() -> Dictionary"
+      ],
+      "method_contracts": {
+        "configure": {"signature": "configure(player_ids: Array, starting_index: int = 0) -> bool", "returns": "bool success", "preconditions": ["player_ids are unique non-empty strings"], "side_effects": ["resets turn order and starts turn 1"], "non_effects": ["does not create players or gameplay state"]},
+        "is_configured": {"signature": "is_configured() -> bool", "returns": "bool", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate turn state"]},
+        "player_count": {"signature": "player_count() -> int", "returns": "configured player count", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate turn state"]},
+        "current_player": {"signature": "current_player() -> String", "returns": "active player id or empty string", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not advance"]},
+        "current_index": {"signature": "current_index() -> int", "returns": "active player index or -1", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not advance"]},
+        "direction": {"signature": "direction() -> int", "returns": "1 or -1", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not reverse"]},
+        "turn_number": {"signature": "turn_number() -> int", "returns": "one-based turn number", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not advance"]},
+        "advance": {"signature": "advance(steps: int = 1) -> String", "returns": "new active player id", "preconditions": ["configure first", "steps is positive"], "side_effects": ["advances active player and turn number"], "non_effects": ["does not apply game rules"], "result_policy": "optional"},
+        "skip": {"signature": "skip(players_to_skip: int = 1) -> String", "returns": "new active player id", "preconditions": ["configure first", "players_to_skip is non-negative"], "side_effects": ["advances past skipped players"], "non_effects": ["does not draw penalties"], "result_policy": "optional"},
+        "reverse": {"signature": "reverse() -> bool", "returns": "bool success", "preconditions": ["configure first"], "side_effects": ["reverses direction"], "non_effects": ["does not automatically advance"], "result_policy": "optional"},
+        "restore": {"signature": "restore(state: Dictionary) -> bool", "returns": "bool success", "preconditions": ["state matches snapshot contract"], "side_effects": ["atomically replaces turn state on success"], "non_effects": ["does not partially mutate on failure"]},
+        "snapshot": {"signature": "snapshot() -> Dictionary", "returns": "serializable turn state", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not mutate turn state"]}
+      },
+      "data_contracts": {
+        "PlayerIds": "Array of unique, non-empty String values",
+        "starting_index": "int; normalized into the player array"
+      },
+      "invariants": [
+        "Use the foundation member turn_system; do not construct another instance.",
+        "Call configure once before current_player, advance, skip, reverse, or snapshot.",
+        "advance and skip already change the active player; do not advance twice for one turn."
+      ],
+      "examples": [
+        "turn_system.configure([\"player_1\", \"player_2\"], 0)",
+        "var next_player: String = turn_system.advance()"
+      ],
+      "foundation_member": "var turn_system := GamegenTurnOrder.new()",
+      "dependencies": ["godot.web_runtime"],
+      "files": [
+        {"source": "godot/turn_system/gamegen_turn_order.gd", "target": "project/addons/gamegen/turn_system/gamegen_turn_order.gd"}
+      ]
+    },
+    {
+      "name": "godot.card_system",
+      "version": "1.1.0",
+      "engine": "Godot 4.7",
+      "category": "gameplay",
+      "description": "Validated rule-neutral deterministic decks, hands, discard setup, multi-card draws, and discard recycling.",
+      "use_when": ["The game uses decks, hands, draw piles, discard piles, chance cards, or property cards."],
+      "provides": ["GamegenCardSystem", "seeded shuffle", "deal and draw", "discard recycling", "hand operations", "private and public snapshots"],
+      "api": [
+        "GamegenCardSystem.new()",
+        "configure(cards: Array, player_ids: Array, seed: int) -> bool",
+        "is_configured() -> bool",
+        "set_auto_recycle(enabled: bool) -> void",
+        "deal(cards_per_player: int) -> bool",
+        "draw_card() -> Dictionary",
+        "draw_to_hand(player_id: String) -> bool",
+        "draw_many_to_hand(player_id: String, count: int) -> int",
+        "start_discard() -> Dictionary",
+        "remove_from_hand(player_id: String, card_id: String) -> Dictionary",
+        "discard_from_hand(player_id: String, card_id: String) -> Dictionary",
+        "discard(card: Dictionary) -> bool",
+        "recycle_discards() -> bool",
+        "hand(player_id: String) -> Array",
+        "top_discard() -> Dictionary",
+        "draw_count() -> int",
+        "discard_count() -> int",
+        "restore(state: Dictionary) -> bool",
+        "snapshot(include_hands: bool = false) -> Dictionary"
+      ],
+      "method_contracts": {
+        "configure": {"signature": "configure(cards: Array, player_ids: Array, seed: int) -> bool", "returns": "bool success", "preconditions": ["cards are dictionaries with unique string ids", "player ids are unique non-empty strings"], "side_effects": ["copies and deterministically shuffles the deck", "resets hands and discards"], "non_effects": ["does not deal cards or start the discard pile"]},
+        "is_configured": {"signature": "is_configured() -> bool", "returns": "bool", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate cards"]},
+        "set_auto_recycle": {"signature": "set_auto_recycle(enabled: bool) -> void", "returns": "void", "preconditions": [], "side_effects": ["changes empty-deck recycling policy"], "non_effects": ["does not recycle immediately"]},
+        "deal": {"signature": "deal(cards_per_player: int) -> bool", "returns": "bool success", "preconditions": ["configure first", "deck contains enough cards for all players"], "side_effects": ["moves cards from deck into every hand"], "non_effects": ["does not start the discard pile"]},
+        "draw_card": {"signature": "draw_card() -> Dictionary", "returns": "removed card dictionary or empty dictionary", "preconditions": ["configure first"], "side_effects": ["removes one card from draw pile", "may recycle discards when enabled"], "non_effects": ["does not add the card to a hand", "does not place the card on the discard pile"]},
+        "draw_to_hand": {"signature": "draw_to_hand(player_id: String) -> bool", "returns": "bool success", "preconditions": ["configure first", "player exists"], "side_effects": ["moves one drawn card into the named hand"], "non_effects": ["does not discard or advance turns"]},
+        "draw_many_to_hand": {"signature": "draw_many_to_hand(player_id: String, count: int) -> int", "returns": "number actually drawn", "preconditions": ["configure first", "player exists", "count is non-negative"], "side_effects": ["moves up to count cards into the named hand"], "non_effects": ["does not discard or advance turns"], "result_policy": "optional"},
+        "start_discard": {"signature": "start_discard() -> Dictionary", "returns": "first discard card or empty dictionary", "preconditions": ["configure first", "draw pile is not empty"], "side_effects": ["moves one card from draw pile to discard pile"], "non_effects": ["does not apply that card's game-specific effect"]},
+        "remove_from_hand": {"signature": "remove_from_hand(player_id: String, card_id: String) -> Dictionary", "returns": "removed card or empty dictionary", "preconditions": ["player and card exist"], "side_effects": ["removes the card from the hand"], "non_effects": ["does not discard the card"]},
+        "discard_from_hand": {"signature": "discard_from_hand(player_id: String, card_id: String) -> Dictionary", "returns": "discarded card or empty dictionary", "preconditions": ["player and card exist"], "side_effects": ["removes the card from hand and appends it to discards"], "non_effects": ["does not validate game-specific legality", "does not advance turns"]},
+        "discard": {"signature": "discard(card: Dictionary) -> bool", "returns": "bool success", "preconditions": ["card has a valid id"], "side_effects": ["appends the supplied card to discards"], "non_effects": ["does not remove the card from any hand"]},
+        "recycle_discards": {"signature": "recycle_discards() -> bool", "returns": "bool success", "preconditions": ["at least two discards exist"], "side_effects": ["keeps the top discard and shuffles older discards into draw pile"], "non_effects": ["does not change hands"]},
+        "hand": {"signature": "hand(player_id: String) -> Array", "returns": "defensive copy of the player's cards", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["mutating the returned array does not mutate component state"]},
+        "top_discard": {"signature": "top_discard() -> Dictionary", "returns": "defensive copy of top discard or empty dictionary", "preconditions": ["start_discard or discard first"], "side_effects": [], "non_effects": ["does not remove the discard"]},
+        "draw_count": {"signature": "draw_count() -> int", "returns": "draw pile size", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate cards"]},
+        "discard_count": {"signature": "discard_count() -> int", "returns": "discard pile size", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate cards"]},
+        "restore": {"signature": "restore(state: Dictionary) -> bool", "returns": "bool success", "preconditions": ["state matches snapshot contract"], "side_effects": ["atomically replaces card state on success"], "non_effects": ["does not partially mutate on failure"]},
+        "snapshot": {"signature": "snapshot(include_hands: bool = false) -> Dictionary", "returns": "serializable card state", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["omits private hands unless requested", "does not mutate cards"]}
+      },
+      "data_contracts": {
+        "CardDefinition": {
+          "type": "Dictionary",
+          "required": {"id": "unique non-empty String"},
+          "optional": "Game-specific keys such as color, rank, value, or effect are preserved"
+        },
+        "Cards": "Array of CardDefinition dictionaries; strings are invalid",
+        "PlayerIds": "Array of unique, non-empty String values"
+      },
+      "invariants": [
+        "Use the foundation member card_system; do not construct another instance.",
+        "Every physical card requires a unique id even when color and rank match.",
+        "Call configure before deal or draw, and call start_discard before top_discard is expected to be populated.",
+        "discard_from_hand both removes the card from the hand and places it on the discard pile."
+      ],
+      "examples": [
+        "var cards: Array = [{\"id\": \"red_0_1\", \"color\": \"red\", \"rank\": \"0\", \"effect\": \"none\"}]",
+        "card_system.configure(cards, [\"player_1\", \"player_2\"], 42)",
+        "card_system.deal(7); var first_discard: Dictionary = card_system.start_discard()"
+      ],
+      "foundation_member": "var card_system := GamegenCardSystem.new()",
+      "dependencies": ["godot.web_runtime"],
+      "files": [
+        {"source": "godot/card_system/gamegen_card_system.gd", "target": "project/addons/gamegen/card_system/gamegen_card_system.gd"}
+      ]
+    },
+    {
+      "name": "godot.inventory_system",
+      "version": "1.1.0",
+      "engine": "Godot 4.7",
+      "category": "gameplay",
+      "description": "Validated capacity-aware inventories with atomic transactions, restoration, stack limits, and snapshots.",
+      "use_when": ["Players collect, consume, equip, trade, or otherwise own items."],
+      "provides": ["GamegenInventory", "item definitions", "stack limits", "capacity checks", "add/remove/query operations"],
+      "api": [
+        "GamegenInventory.new()",
+        "configure(capacity: int, item_definitions: Array) -> bool",
+        "is_configured() -> bool",
+        "capacity() -> int",
+        "remaining_capacity() -> int",
+        "has_definition(item_id: String) -> bool",
+        "definition(item_id: String) -> Dictionary",
+        "quantity(item_id: String) -> int",
+        "can_add(item_id: String, amount: int = 1) -> bool",
+        "can_remove(item_id: String, amount: int = 1) -> bool",
+        "add(item_id: String, amount: int = 1) -> bool",
+        "remove(item_id: String, amount: int = 1) -> bool",
+        "apply_transaction(changes: Dictionary) -> bool",
+        "clear() -> void",
+        "restore(state: Dictionary) -> bool",
+        "total_items() -> int",
+        "snapshot() -> Dictionary"
+      ],
+      "method_contracts": {
+        "configure": {"signature": "configure(capacity: int, item_definitions: Array) -> bool", "returns": "bool success", "preconditions": ["capacity is non-negative", "definitions have unique ids and positive max_stack"], "side_effects": ["resets inventory definitions and contents"], "non_effects": ["does not add items"]},
+        "is_configured": {"signature": "is_configured() -> bool", "returns": "bool", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "capacity": {"signature": "capacity() -> int", "returns": "configured capacity", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "remaining_capacity": {"signature": "remaining_capacity() -> int", "returns": "unused capacity", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "has_definition": {"signature": "has_definition(item_id: String) -> bool", "returns": "bool", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not add the item"]},
+        "definition": {"signature": "definition(item_id: String) -> Dictionary", "returns": "defensive definition copy or empty dictionary", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "quantity": {"signature": "quantity(item_id: String) -> int", "returns": "owned quantity", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "can_add": {"signature": "can_add(item_id: String, amount: int = 1) -> bool", "returns": "bool", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not add items"]},
+        "can_remove": {"signature": "can_remove(item_id: String, amount: int = 1) -> bool", "returns": "bool", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not remove items"]},
+        "add": {"signature": "add(item_id: String, amount: int = 1) -> bool", "returns": "bool success", "preconditions": ["definition exists", "capacity and stack limits allow amount"], "side_effects": ["adds amount on success"], "non_effects": ["does not partially add on failure"]},
+        "remove": {"signature": "remove(item_id: String, amount: int = 1) -> bool", "returns": "bool success", "preconditions": ["enough quantity exists"], "side_effects": ["removes amount on success"], "non_effects": ["does not partially remove on failure"]},
+        "apply_transaction": {"signature": "apply_transaction(changes: Dictionary) -> bool", "returns": "bool success", "preconditions": ["all item ids and signed quantities are valid"], "side_effects": ["applies every change atomically on success"], "non_effects": ["does not partially mutate on failure"]},
+        "clear": {"signature": "clear() -> void", "returns": "void", "preconditions": ["configure first"], "side_effects": ["removes all owned items"], "non_effects": ["does not remove definitions"]},
+        "restore": {"signature": "restore(state: Dictionary) -> bool", "returns": "bool success", "preconditions": ["state matches snapshot contract"], "side_effects": ["atomically replaces inventory state on success"], "non_effects": ["does not partially mutate on failure"]},
+        "total_items": {"signature": "total_items() -> int", "returns": "sum of quantities", "preconditions": [], "side_effects": [], "non_effects": ["does not mutate inventory"]},
+        "snapshot": {"signature": "snapshot() -> Dictionary", "returns": "serializable inventory state", "preconditions": ["configure first"], "side_effects": [], "non_effects": ["does not mutate inventory"]}
+      },
+      "data_contracts": {
+        "ItemDefinition": {
+          "type": "Dictionary",
+          "required": {"id": "unique non-empty String", "max_stack": "positive int"}
+        },
+        "capacity": "non-negative int"
+      },
+      "invariants": [
+        "Use the foundation member inventory_system; do not construct another instance.",
+        "Configure definitions before add, remove, query, transaction, restore, or snapshot.",
+        "A failed transaction is atomic and does not partially mutate inventory."
+      ],
+      "examples": [
+        "inventory_system.configure(12, [{\"id\": \"key\", \"max_stack\": 1}])"
+      ],
+      "foundation_member": "var inventory_system := GamegenInventory.new()",
+      "dependencies": ["godot.web_runtime"],
+      "files": [
+        {"source": "godot/inventory_system/gamegen_inventory.gd", "target": "project/addons/gamegen/inventory_system/gamegen_inventory.gd"}
+      ]
+    }
+  ],
+  "recommended_sets": [
+    {
+      "name": "turn_based_card",
+      "description": "Composable card ownership and turn-order systems for games whose rules are authored per request.",
+      "components": ["godot.turn_system", "godot.card_system"]
+    }
+  ]
+}

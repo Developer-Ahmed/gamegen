@@ -5,7 +5,7 @@ import requests
 from django.conf import settings
 import logging
 
-logger = logging.getLogger(" apps.supabase_home")
+logger = logging.getLogger(__name__)
 
 
 class SupabaseError(Exception):
@@ -136,23 +136,24 @@ class SupabaseService:
         if headers:
             request_headers.update(headers)
 
-        # Enhanced logging for debugging
-        logger.info(f"Making {method} request to {url}")
-        logger.info(f"Headers: {request_headers}")
-        if 'Authorization' in request_headers:
-            auth_header = request_headers['Authorization']
-            logger.info(f"Authorization header: {auth_header[:15]}...")
-        else:
-            logger.info("No Authorization header found")
-        
-        logger.info(f"Request data: {data}")
-        logger.info(f"Request params: {params}")
+        # Request metadata is useful operationally; credentials and payloads are
+        # intentionally excluded because they can contain passwords, JWTs, API
+        # keys, or user data.
+        logger.info(
+            "Supabase request method=%s endpoint=%s authenticated=%s admin=%s",
+            method,
+            endpoint,
+            bool(auth_token),
+            is_admin,
+        )
 
         # Ensure data is not None for any requests with application/json content type
         # Supabase API expects a valid JSON body (even if empty) when Content-Type is application/json
-        if data is None and 'Content-Type' in request_headers and request_headers['Content-Type'] == 'application/json':
+        if (
+            data is None
+            and request_headers.get("Content-Type") == "application/json"
+        ):
             data = {}
-            logger.info("Initialized empty JSON data")
 
         try:
             logger.debug(f"Making {method} request to {url}")
@@ -165,23 +166,22 @@ class SupabaseService:
                 timeout=timeout,
             )
 
-            # Log request details at debug level
-            logger.info(f"Request to {url}: {method} - Status: {response.status_code}")
-            logger.info(f"Response headers: {response.headers}")
-            
-            # Log response content for debugging
-            try:
-                if response.content:
-                    logger.info(f"Response content: {response.content[:200]}...")
-                    if response.status_code >= 400:
-                        logger.error(f"Error response: {response.content}")
-            except Exception as e:
-                logger.error(f"Error logging response content: {str(e)}")
+            logger.info(
+                "Supabase response method=%s endpoint=%s status=%s request_id=%s",
+                method,
+                endpoint,
+                response.status_code,
+                response.headers.get("sb-request-id", ""),
+            )
 
             # Handle different error scenarios
             if response.status_code == 401 or response.status_code == 403:
                 error_detail = self._parse_error_response(response)
-                logger.error(f"Authentication error: {error_detail}")
+                logger.warning(
+                    "Supabase authentication rejected endpoint=%s status=%s",
+                    endpoint,
+                    response.status_code,
+                )
                 raise SupabaseAuthError(f"Authentication error: {error_detail}")
 
             # Raise exception for other error status codes
@@ -194,7 +194,11 @@ class SupabaseService:
 
         except requests.exceptions.HTTPError as e:
             error_detail = self._parse_error_response(response)
-            logger.error(f"Supabase API error: {str(e)} - Details: {error_detail}")
+            logger.error(
+                "Supabase API error endpoint=%s status=%s",
+                endpoint,
+                response.status_code,
+            )
             raise SupabaseAPIError(
                 message=f"Supabase API error: {str(e)}",
                 status_code=response.status_code,

@@ -1,15 +1,29 @@
 from typing import Optional, Tuple, Any
-from django.conf import settings
 from django.contrib.auth import get_user_model
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.request import Request
-import jwt
-from jwt.exceptions import InvalidTokenError, ExpiredSignatureError
 import logging
+
+from ..supabase.auth import SupabaseAuthService
 
 User = get_user_model() # using django default user model
 logger = logging.getLogger('apps.authentication')
+auth_service = SupabaseAuthService()
+
+
+def _access_token_from_request(request: Request) -> Optional[str]:
+    authorization = request.headers.get("Authorization", "").strip()
+    if authorization:
+        scheme, separator, token = authorization.partition(" ")
+        if scheme.lower() != "bearer" or not separator or not token.strip():
+            raise AuthenticationFailed("Invalid Authorization header")
+        return token.strip()
+
+    cookie_token = request.COOKIES.get("access_token", "").strip()
+    if cookie_token.lower().startswith("bearer "):
+        cookie_token = cookie_token[7:].strip()
+    return cookie_token or None
 
 class SupabaseJWTAuthentication(BaseAuthentication):
     """
@@ -22,31 +36,13 @@ class SupabaseJWTAuthentication(BaseAuthentication):
     
     def authenticate(self, request: Request) -> Optional[Tuple[Any, dict]]:
 
-        # Get the access token from cookies
-        auth_header = request.COOKIES.get("access_token", '')
-        
-        # If no Authorization header, return None (anonymous user)
-        if not auth_header.startswith('Bearer '):
+        token = _access_token_from_request(request)
+        if not token:
             return None
-        
-        # Extract the token
-        token = auth_header.split(' ')[1]
-        
+
         try:
-            # Decode and verify the token
-            payload = jwt.decode(
-                token,
-                settings.SUPABASE_JWT_SECRET,
-                algorithms=['HS256'],
-                options={
-                    'verify_signature': True,
-                    'verify_iat': False,  # Skip 'issued at' verification for testing
-                    'verify_aud': False   # Skip audience verification for testing
-                }
-            )
-            
-            # Get or create the user based on Supabase user ID
-            user_id = payload.get('sub')
+            verified_user = auth_service.get_session(token)
+            user_id = verified_user.get('id')
             if not user_id:
                 raise AuthenticationFailed('Invalid token payload')
             
@@ -57,7 +53,7 @@ class SupabaseJWTAuthentication(BaseAuthentication):
                 # Create a new user if they don't exist
                 user = User.objects.create(
                     username=user_id,
-                    email=payload.get('email', ''),
+                    email=verified_user.get('email', ''),
                     is_active=True
                 )
                 logger.info(f"Created new user with Supabase ID: {user_id}")
@@ -83,23 +79,17 @@ class SupabaseJWTAuthentication(BaseAuthentication):
                 except Exception as e:
                     logger.error(f"Error creating/updating UserProfile: {str(e)}")
             
-            # Add Supabase claims to the user object for use in permission checks
-            user.supabase_claims = payload.get('claims', {})
-            user.supabase_roles = payload.get('roles', [])
+            user.supabase_claims = verified_user
+            user.supabase_roles = (verified_user.get('app_metadata') or {}).get('roles', [])
             
-            return (user, payload)
-            
-        except ExpiredSignatureError:
-            logger.warning("Expired JWT token received")
-            raise AuthenticationFailed('Token expired')
-            
-        except InvalidTokenError as e:
-            logger.warning(f"Invalid JWT token: {str(e)}")
-            raise AuthenticationFailed('Invalid authentication token')
+            return (user, verified_user)
+
+        except AuthenticationFailed:
+            raise
             
         except Exception as e:
-            logger.error(f"JWT validation error: {str(e)}")
-            raise AuthenticationFailed('Authentication error')
+            logger.warning("Supabase access token validation failed: %s", e)
+            raise AuthenticationFailed('Invalid or expired authentication token')
     
     def authenticate_header(self, request: Request) -> str:
         return 'Bearer'

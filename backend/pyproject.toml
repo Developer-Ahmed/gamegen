@@ -23,6 +23,20 @@ dependencies = [
     "e2b (>=1.11.1,<2.0.0)",
     "langchain-google-genai (>=2.1.10,<3.0.0)",
     "django-cors-headers (>=4.9.0,<5.0.0)",
+    "tokenizers (>=0.22.0,<0.23.0)",
+    "openai-harmony (>=0.0.8,<0.1.0)",
+]
+
+[tool.poetry]
+packages = [
+    {include = "agent"},
+    {include = "backend"},
+    {include = "gamegen"},
+    {include = "scripts"},
+]
+include = [
+    {path = "agent/components/**", format = ["sdist", "wheel"]},
+    {path = "agent/tokenizers/**", format = ["sdist", "wheel"]},
 ]
 
 [tool.poetry.scripts]

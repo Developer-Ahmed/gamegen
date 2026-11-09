@@ -60,6 +60,21 @@ class State(InputState):
     The code for the game.
     """
 
+    context_summary: str = field(default="")
+    """Latest model-generated handoff summary for compacted conversation history."""
+
+    context_summary_through: int = field(default=0)
+    """Number of audit-history messages represented by ``context_summary``."""
+
+    context_compaction_count: int = field(default=0)
+    """Number of successful context checkpoints created for this task."""
+
+    no_progress_count: int = field(default=0)
+    """Consecutive model turns that produced no usable tool call after generation began."""
+
+    model_terminal_error: str = field(default="")
+    """Terminal model-adapter failure that prevents further graph execution."""
+
     # Additional attributes can be added here as needed.
     # Common examples include:
     # retrieved_documents: List[Document] = field(default_factory=list)

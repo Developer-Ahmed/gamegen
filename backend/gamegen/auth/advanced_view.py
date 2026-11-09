@@ -2,7 +2,12 @@ from urllib import response
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from rest_framework import status, permissions
-from rest_framework.decorators import api_view, permission_classes, throttle_classes
+from rest_framework.decorators import (
+    api_view,
+    authentication_classes,
+    permission_classes,
+    throttle_classes,
+)
 from rest_framework.request import Request
 from rest_framework.response import Response
 from django.core.cache import cache
@@ -17,7 +22,6 @@ from ..supabase.auth import SupabaseAuthService
 # Import custom throttling classes
 from .throttling import IPRateThrottle, IPBasedUserRateThrottle
 from rest_framework.permissions import AllowAny
-from rest_framework.decorators import api_view, permission_classes
 
 # Use root logger for this module to ensure logs are always output
 root_logger = logging.getLogger()
@@ -49,6 +53,7 @@ def validate_email_format(email):
 
 
 @api_view(["POST"])
+@authentication_classes([])
 @throttle_classes([IPRateThrottle])
 @permission_classes([AllowAny])
 def signup(request: Request) -> Response:
@@ -94,8 +99,6 @@ def signup(request: Request) -> Response:
     try:
         # Call auth service to create user
         auth_result = auth_service.create_user(email=email, password=password)
-        print(f"auth_result: {auth_result}")
-        
         # Return success response
         sanitized_response = {
             "message": "User created successfully",
@@ -119,6 +122,7 @@ def signup(request: Request) -> Response:
 
 
 @api_view(["POST"])
+@authentication_classes([])
 @throttle_classes([IPRateThrottle])
 @permission_classes([AllowAny])
 def sign_in_with_email(request: Request) -> Response:
@@ -169,9 +173,6 @@ def sign_in_with_email(request: Request) -> Response:
 
         access_token = response.get("access_token")
         refresh_token = response.get("refresh_token")
-        print(f"access_token: {access_token}")
-        print(f"refresh_token: {refresh_token}")
-
         # Set tokens as HTTP-only cookies
         # Access Token: expires in 1 hour (example)
         res.set_cookie(
@@ -217,6 +218,8 @@ def sign_in_with_email(request: Request) -> Response:
         
 
 @api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
 def sign_out(request: Request) -> Response:
     """
     Sign out a user.
@@ -262,6 +265,7 @@ def sign_out(request: Request) -> Response:
             )
 
 @api_view(["GET"])
+@authentication_classes([])
 @permission_classes([AllowAny])
 def get_session(request: Request) -> Response:
     """
@@ -272,11 +276,11 @@ def get_session(request: Request) -> Response:
     auth_token = None
     if auth_header.startswith("Bearer "):
         auth_token = auth_header.split(" ", 1)[1]
-        logger.info(f"get_session: Received access_token from Authorization header: {auth_token[:12]}...")
+        logger.info("get_session: Received access token from Authorization header")
     else:
         # Fallback to cookie
         auth_token = request.COOKIES.get("access_token", "")
-        logger.info(f"get_session: Received access_token from cookie: {auth_token[:12]}...")
+        logger.info("get_session: Received access token from cookie")
 
     if not auth_token:
         logger.warning("get_session: No access_token found in header or cookie.")
@@ -288,13 +292,17 @@ def get_session(request: Request) -> Response:
         response = auth_service.get_session(auth_token=auth_token)
         return Response(response, status=status.HTTP_200_OK)
     except Exception as e:
-        logger.error(f"get_session: Exception: {str(e)}")
-        return Response(
-            {"error": f"Failed to get session: {str(e)}"},
-            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        logger.warning("Session validation failed: %s", e)
+        res = Response(
+            {"error": "Session expired. Please refresh or log in again."},
+            status=status.HTTP_401_UNAUTHORIZED,
         )
+        res.delete_cookie("access_token")
+        return res
 
 @api_view(["POST"])
+@authentication_classes([])
+@permission_classes([AllowAny])
 def refresh_session(request: Request) -> Response:
     """
     Refresh a user's session using a refresh token.
@@ -303,7 +311,8 @@ def refresh_session(request: Request) -> Response:
 
     if not refresh_token:
         return Response(
-            {"error": "Refresh token is required"}, status=status.HTTP_400_BAD_REQUEST
+            {"error": "Session expired. Please log in again."},
+            status=status.HTTP_401_UNAUTHORIZED,
         )
 
     try:
@@ -337,7 +346,11 @@ def refresh_session(request: Request) -> Response:
 
         return res
     except Exception as e:
-        return Response(
-            {"error": f"Failed to refresh session: {str(e)}"},
-            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        logger.warning("Session refresh failed: %s", e)
+        res = Response(
+            {"error": "Session expired. Please log in again."},
+            status=status.HTTP_401_UNAUTHORIZED,
         )
+        res.delete_cookie("access_token")
+        res.delete_cookie("refresh_token")
+        return res

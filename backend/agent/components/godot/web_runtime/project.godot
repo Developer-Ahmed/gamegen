@@ -1,0 +1,25 @@
+; Generated games extend this stable Godot 4 web foundation.
+config_version=5
+
+[application]
+
+config/name="{{GAME_TITLE}}"
+run/main_scene="res://game/main.tscn"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/window_width_override=960
+window/size/window_height_override=540
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+
+[audio]
+
+driver/enable_input=false
